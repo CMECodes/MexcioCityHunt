@@ -8,29 +8,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Anton&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --paper:#e8dfc8; --paper-dark:#d8cba8; --ink:#1f1a14; --faded:#5b5142;
-    --stamp:#9e2b25; --stamp2:#1d3a5f; --black:#15110b;
-  }
+  :root{ --paper:#e8dfc8; --ink:#1f1a14; --faded:#5b5142; --stamp:#9e2b25; --stamp2:#1d3a5f; --black:#15110b; }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; scroll-behavior:smooth; }
   body{ background:#241f17; font-family:'Courier Prime',monospace; color:var(--ink); line-height:1.55; }
 
-  /* ===== HERO ===== */
-  .hero{ position:relative;height:100vh;width:100%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#0b1026; }
+  .hero{ position:relative;height:100vh;width:100%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#16203f; }
   .hero svg.scene{position:absolute;inset:0;width:100%;height:100%;}
-  .hero .vignette{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%, transparent 30%, rgba(5,6,18,.78) 100%);}
+  .hero .vignette{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 44%, transparent 26%, rgba(10,10,28,.74) 100%);}
   .hero .overlay{position:relative;z-index:3;text-align:center;color:#f4ead2;padding:0 20px;}
-  .hero .kicker{font-family:'Special Elite';letter-spacing:6px;font-size:14px;color:#c9a24b;text-transform:uppercase;margin-bottom:18px;}
-  .hero .op{font-family:'Special Elite';letter-spacing:9px;font-size:15px;color:#d8c7a6;margin-bottom:4px;}
-  .hero h1{font-family:'Anton';font-size:clamp(56px,13vw,150px);line-height:.9;letter-spacing:2px;text-transform:uppercase;text-shadow:0 6px 30px rgba(0,0,0,.6);background:linear-gradient(180deg,#fbf3df 0%,#d9b25c 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
-  .hero .codeline{font-family:'Special Elite';letter-spacing:2px;font-size:clamp(12px,2.6vw,16px);margin-top:18px;color:#e7d9b5;}
-  .hero .classified{display:inline-block;margin-top:26px;font-family:'Anton';letter-spacing:3px;color:#fff;background:var(--stamp);padding:5px 18px;font-size:15px;transform:rotate(-2deg);box-shadow:0 6px 18px rgba(0,0,0,.4);}
-  .scrollcue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:3;text-align:center;color:#e7d9b5;font-family:'Special Elite';font-size:12px;letter-spacing:3px;}
-  .scrollcue .chev{display:block;margin:8px auto 0;width:18px;height:18px;border-right:2px solid #c9a24b;border-bottom:2px solid #c9a24b;transform:rotate(45deg);animation:bob 1.6s ease-in-out infinite;}
+  .hero .kicker{font-family:'Special Elite';letter-spacing:6px;font-size:14px;color:#e2a52e;text-transform:uppercase;margin-bottom:18px;text-shadow:0 2px 8px rgba(0,0,0,.6);}
+  .hero .op{font-family:'Special Elite';letter-spacing:9px;font-size:15px;color:#e9d7ad;margin-bottom:4px;text-shadow:0 2px 8px rgba(0,0,0,.6);}
+  .hero h1{font-family:'Anton';font-size:clamp(56px,13vw,150px);line-height:.9;letter-spacing:2px;text-transform:uppercase;text-shadow:0 6px 30px rgba(0,0,0,.7);background:linear-gradient(180deg,#fbf3df 0%,#e0a92e 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .hero .codeline{font-family:'Special Elite';letter-spacing:2px;font-size:clamp(12px,2.6vw,16px);margin-top:18px;color:#f0e2bd;text-shadow:0 2px 8px rgba(0,0,0,.7);}
+  .hero .classified{display:inline-block;margin-top:26px;font-family:'Anton';letter-spacing:3px;color:#fff;background:var(--stamp);padding:5px 18px;font-size:15px;transform:rotate(-2deg);box-shadow:0 6px 18px rgba(0,0,0,.5);}
+  .scrollcue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:3;text-align:center;color:#f0e2bd;font-family:'Special Elite';font-size:12px;letter-spacing:3px;text-shadow:0 2px 6px rgba(0,0,0,.7);}
+  .scrollcue .chev{display:block;margin:8px auto 0;width:18px;height:18px;border-right:2px solid #e2a52e;border-bottom:2px solid #e2a52e;transform:rotate(45deg);animation:bob 1.6s ease-in-out infinite;}
   @keyframes bob{0%,100%{transform:translateY(0) rotate(45deg);}50%{transform:translateY(8px) rotate(45deg);}}
 
-  /* ===== PAGES ===== */
   .sheet-wrap{padding:48px 12px 60px;}
   .page{ width:8.5in;max-width:100%;min-height:11in;margin:0 auto 34px;background:var(--paper);
     background-image:radial-gradient(circle at 18% 22%, rgba(120,100,60,.18), transparent 30%),radial-gradient(circle at 82% 78%, rgba(120,100,60,.16), transparent 32%),radial-gradient(circle at 60% 12%, rgba(90,70,40,.10), transparent 26%);
@@ -60,18 +55,16 @@
   ol.rules{margin:8px 0 0 20px;font-size:13.5px;}
   ol.rules li{margin-bottom:7px;}
   .sectlabel{font-family:'Anton';letter-spacing:3px;font-size:20px;text-transform:uppercase;border-top:3px double var(--ink);border-bottom:3px double var(--ink);padding:6px 0;margin:8px 0 22px;text-align:center;}
-
-  /* START clue */
   .clue{border:2px dashed var(--faded);padding:28px 32px;margin:0 0 30px;background:rgba(255,255,255,.14);position:relative;}
   .clue .cluenum{font-family:'Anton';font-size:13px;letter-spacing:3px;color:var(--stamp);border:2px solid var(--stamp);display:inline-block;padding:2px 10px;margin-bottom:14px;}
   .clue .destination{font-family:'Special Elite';font-size:12px;letter-spacing:2px;color:var(--faded);float:right;}
   .verse{font-family:'Special Elite';font-size:16px;line-height:2;white-space:pre-line;margin-top:8px;}
   .clue .foot{margin-top:16px;font-size:12px;color:var(--faded);border-top:1px solid var(--faded);padding-top:8px;}
 
-  /* ===== FLIP CARDS ===== */
   .flip-card{perspective:1600px;margin:0 0 30px;}
   .flip-inner{position:relative;width:100%;min-height:470px;transition:transform .85s cubic-bezier(.2,.85,.25,1);transform-style:preserve-3d;}
   .flip-inner.flipped{transform:rotateY(180deg);}
+  .flip-inner.no-anim{transition:none !important;}
   .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;padding:26px 30px;background:rgba(255,255,255,.16);overflow:auto;}
   .flip-front{border:2px solid var(--faded);}
   .flip-back{border:2px dashed var(--faded);transform:rotateY(180deg);}
@@ -83,15 +76,18 @@
   .person input{position:absolute;opacity:0;width:0;height:0;}
   .person .box{width:30px;height:30px;border:2px solid var(--ink);display:inline-flex;align-items:center;justify-content:center;font-family:'Anton';color:#fff;flex:0 0 auto;transition:background .15s;}
   .person input:checked ~ .box{background:var(--stamp);border-color:var(--stamp);}
-  .person input:checked ~ .box::after{content:"✓";}
+  .person input:checked ~ .box::after{content:"\2713";}
   .person input:checked ~ .name{text-decoration:line-through;opacity:.55;}
   .unlock-hint{margin-top:16px;font-size:12px;color:var(--faded);letter-spacing:1px;text-align:center;}
   .cluenum-back{font-family:'Anton';font-size:13px;letter-spacing:3px;color:var(--stamp);border:2px solid var(--stamp);display:inline-block;padding:2px 10px;margin-bottom:12px;}
   .flipback-btn{margin-top:14px;font-family:'Special Elite';font-size:11px;letter-spacing:2px;color:var(--faded);background:none;border:1px solid var(--faded);padding:4px 12px;cursor:pointer;}
   .finale{font-family:'Anton';font-size:30px;line-height:1.05;color:var(--stamp);text-transform:uppercase;margin-bottom:10px;}
+  .reset-row{text-align:center;margin-top:6px;}
+  .reset-btn{font-family:'Special Elite';font-size:11px;letter-spacing:2px;color:var(--faded);background:none;border:1px dashed var(--faded);padding:6px 16px;cursor:pointer;}
+  .reset-btn:hover{color:var(--stamp);border-color:var(--stamp);}
 
-  /* ANNEX */
-  .annex-warn{font-family:'Anton';color:var(--stamp);text-align:center;font-size:16px;letter-spacing:2px;border:3px solid var(--stamp);padding:8px;margin-bottom:22px;}
+  .annex-warn{font-family:'Anton';color:var(--stamp);text-align:center;font-size:16px;letter-spacing:2px;border:3px solid var(--stamp);padding:8px;margin-bottom:8px;}
+  .annex-sub{text-align:center;font-family:'Special Elite';letter-spacing:2px;font-size:12px;color:var(--faded);margin-bottom:20px;}
   .stop{border:1px solid var(--ink);margin-bottom:20px;background:rgba(255,255,255,.16);}
   .stop .bar{background:var(--ink);color:var(--paper);padding:8px 16px;font-family:'Special Elite';letter-spacing:2px;display:flex;justify-content:space-between;font-size:13px;}
   .stop .body{padding:14px 18px;font-size:13px;}
@@ -103,10 +99,9 @@
   .footer-note{position:absolute;bottom:24px;left:58px;font-size:10px;color:var(--faded);letter-spacing:1px;}
 
   @media (max-width:520px){ .verse{font-size:14px;line-height:1.85;} .flip-inner{min-height:520px;} }
-
   @media print{
     html,body{background:#fff;}
-    .hero,.scrollcue,.flipback-btn,.unlock-hint{display:none !important;}
+    .hero,.scrollcue,.flipback-btn,.unlock-hint,.reset-row{display:none !important;}
     .sheet-wrap{padding:0;}
     .page{margin:0;box-shadow:none;width:100%;min-height:100vh;page-break-after:always;opacity:1 !important;transform:none !important;}
     .page:last-child{page-break-after:auto;}
@@ -118,61 +113,101 @@
 </head>
 <body>
 
-<!-- ===== HERO ===== -->
 <header class="hero">
   <svg class="scene" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#070a1e"/><stop offset="55%" stop-color="#141233"/><stop offset="100%" stop-color="#4a1f2c"/></linearGradient>
-      <radialGradient id="moonglow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#f4ecd0" stop-opacity="0.9"/><stop offset="40%" stop-color="#f4ecd0" stop-opacity="0.25"/><stop offset="100%" stop-color="#f4ecd0" stop-opacity="0"/></radialGradient>
-      <linearGradient id="city" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0c0b1f"/><stop offset="100%" stop-color="#05040f"/></linearGradient>
+      <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#13204a"/><stop offset="48%" stop-color="#241d4e"/><stop offset="100%" stop-color="#46213f"/>
+      </linearGradient>
+      <pattern id="greca" width="80" height="30" patternUnits="userSpaceOnUse">
+        <rect width="80" height="30" fill="#c0832e"/>
+        <path d="M8 26 L40 6 L72 26 Z" fill="#9e2b25" stroke="#14110a" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="40" cy="20" r="3" fill="#f0d68a"/>
+      </pattern>
     </defs>
-    <rect width="1200" height="800" fill="url(#sky)"/>
-    <circle cx="965" cy="170" r="180" fill="url(#moonglow)"/>
-    <circle cx="965" cy="170" r="68" fill="#f6efd6"/>
-    <circle cx="930" cy="150" r="68" fill="#141233" opacity="0.55"/>
-    <g fill="#fdf6df"><circle cx="120" cy="90" r="1.6"/><circle cx="260" cy="150" r="1.2"/><circle cx="420" cy="70" r="1.8"/><circle cx="540" cy="180" r="1.1"/><circle cx="700" cy="100" r="1.5"/><circle cx="180" cy="220" r="1.2"/><circle cx="360" cy="240" r="1"/><circle cx="1100" cy="320" r="1.4"/><circle cx="1160" cy="120" r="1.2"/><circle cx="80" cy="330" r="1.3"/><circle cx="620" cy="40" r="1.2"/><circle cx="780" cy="240" r="1"/></g>
-    <g opacity="0.85">
-      <path d="M0 60 Q300 110 600 60 T1200 60" stroke="#caa24b" stroke-width="1.5" fill="none"/>
-      <g>
-        <polygon points="40,70 90,70 65,112" fill="#d4456b"/><polygon points="150,78 200,78 175,120" fill="#2bb3a3"/><polygon points="270,80 320,80 295,122" fill="#e8a13a"/><polygon points="400,78 450,78 425,120" fill="#6c63d4"/><polygon points="540,72 590,72 565,114" fill="#d4456b"/><polygon points="690,72 740,72 715,114" fill="#2bb3a3"/><polygon points="820,78 870,78 845,120" fill="#e8a13a"/><polygon points="960,84 1010,84 985,126" fill="#6c63d4"/><polygon points="1090,74 1140,74 1115,116" fill="#d4456b"/>
+    <rect width="1200" height="800" fill="url(#night)"/>
+    <g fill="#f0d68a" opacity="0.10">
+      <path d="M920 180 L1230 60 L1230 300 Z"/><path d="M920 180 L1230 320 L1130 470 Z"/><path d="M920 180 L780 -40 L1010 -40 Z"/><path d="M920 180 L640 120 L700 -10 Z"/>
+    </g>
+    <g fill="#f4e6b4" stroke="#14110a" stroke-width="1.4">
+      <g transform="translate(150,120) scale(1.1)"><path d="M0 -14 L3 -3 L14 0 L3 3 L0 14 L-3 3 L-14 0 L-3 -3 Z"/></g>
+      <g transform="translate(360,80)"><path d="M0 -12 L2.6 -2.6 L12 0 L2.6 2.6 L0 12 L-2.6 2.6 L-12 0 L-2.6 -2.6 Z"/></g>
+      <g transform="translate(560,150) scale(.8)"><path d="M0 -12 L2.6 -2.6 L12 0 L2.6 2.6 L0 12 L-2.6 2.6 L-12 0 L-2.6 -2.6 Z"/></g>
+      <g transform="translate(1080,300)"><path d="M0 -12 L2.6 -2.6 L12 0 L2.6 2.6 L0 12 L-2.6 2.6 L-12 0 L-2.6 -2.6 Z"/></g>
+      <g transform="translate(250,260) scale(.7)"><path d="M0 -12 L2.6 -2.6 L12 0 L2.6 2.6 L0 12 L-2.6 2.6 L-12 0 L-2.6 -2.6 Z"/></g>
+      <g transform="translate(700,70) scale(.9)"><path d="M0 -12 L2.6 -2.6 L12 0 L2.6 2.6 L0 12 L-2.6 2.6 L-12 0 L-2.6 -2.6 Z"/></g>
+    </g>
+    <g stroke="#14110a" stroke-width="3.5"><circle cx="920" cy="180" r="92" fill="#f2e6b8"/></g>
+    <g fill="#caa84f" stroke="none" opacity="0.85">
+      <ellipse cx="930" cy="200" rx="26" ry="16"/><circle cx="906" cy="190" r="11"/>
+      <path d="M900 182 q-7 -22 1 -31 q7 7 5 30 Z"/><path d="M909 181 q-3 -24 8 -30 q4 9 -3 28 Z"/>
+    </g>
+    <g stroke="#14110a" stroke-width="3.5" stroke-linejoin="round">
+      <path d="M-40 600 C120 470 230 430 360 420 C500 432 640 500 760 600 Z" fill="#6e4738"/>
+      <path d="M250 470 C300 446 340 442 380 444 C430 452 470 470 510 496 C470 486 440 500 410 492 C380 484 360 498 330 490 C300 484 280 480 250 470 Z" fill="#e9e1cf"/>
+    </g>
+    <g stroke="#14110a" stroke-width="3.5" stroke-linejoin="round">
+      <path d="M560 620 C660 470 740 360 800 300 C860 360 940 470 1040 620 Z" fill="#7d5240"/>
+      <path d="M748 392 C772 360 790 332 800 312 C812 334 830 360 854 392 C828 384 818 404 800 398 C784 392 772 402 748 392 Z" fill="#efe7d6"/>
+    </g>
+    <g fill="#b6a6c2" opacity="0.78" stroke="#14110a" stroke-width="2">
+      <path d="M800 308 C780 286 800 270 792 250 C812 240 808 220 826 214 C812 232 836 244 822 262 C842 268 826 292 846 296 C824 304 818 286 800 308 Z"/>
+    </g>
+    <g stroke="#14110a" stroke-width="3.5" stroke-linejoin="round">
+      <path d="M-10 640 C300 590 900 590 1210 640 L1210 810 L-10 810 Z" fill="#356b54"/>
+    </g>
+    <g stroke="#14110a" stroke-width="3" stroke-linejoin="round">
+      <rect x="120" y="560" width="86" height="92" fill="#b5552f"/><rect x="220" y="586" width="64" height="66" fill="#d99a3c"/>
+      <rect x="470" y="556" width="96" height="98" fill="#e7d2a6"/><path d="M470 556 Q518 500 566 556 Z" fill="#2f7d7d"/>
+      <rect x="514" y="476" width="8" height="30" fill="#14110a" stroke="none"/><path d="M510 488 h16 M518 476 v22" stroke="#14110a" stroke-width="3"/>
+      <rect x="610" y="588" width="70" height="64" fill="#9e2b25"/><rect x="940" y="566" width="74" height="86" fill="#c0832e"/><rect x="1030" y="596" width="64" height="56" fill="#2f7d7d"/>
+    </g>
+    <g fill="#ffd36b" stroke="#14110a" stroke-width="1.6">
+      <rect x="140" y="582" width="14" height="18"/><rect x="172" y="582" width="14" height="18"/><rect x="140" y="614" width="14" height="18"/><rect x="172" y="614" width="14" height="18"/>
+      <rect x="500" y="582" width="14" height="20"/><rect x="524" y="582" width="14" height="20"/><rect x="630" y="606" width="13" height="16"/><rect x="652" y="606" width="13" height="16"/>
+      <rect x="958" y="588" width="14" height="18"/><rect x="984" y="588" width="14" height="18"/>
+    </g>
+    <g stroke="#14110a" stroke-width="3.5" stroke-linejoin="round" fill="#3f8f7a">
+      <g transform="translate(110,760)">
+        <path d="M0 0 C-6 -52 -22 -78 -52 -104 C-26 -92 -10 -64 0 -28 C10 -64 26 -92 52 -104 C22 -78 6 -52 0 0 Z"/>
+        <path d="M0 0 C-40 -40 -78 -54 -112 -56 C-78 -76 -36 -64 0 -22 C36 -64 78 -76 112 -56 C78 -54 40 -40 0 0 Z"/>
+        <path d="M0 0 C-22 -18 -52 -22 -82 -18 C-54 -36 -22 -28 0 0 C22 -28 54 -36 82 -18 C52 -22 22 -18 0 0 Z"/>
+      </g>
+      <g transform="translate(1090,768) scale(1.15)">
+        <path d="M0 0 C-6 -52 -22 -78 -52 -104 C-26 -92 -10 -64 0 -28 C10 -64 26 -92 52 -104 C22 -78 6 -52 0 0 Z"/>
+        <path d="M0 0 C-40 -40 -78 -54 -112 -56 C-78 -76 -36 -64 0 -22 C36 -64 78 -76 112 -56 C78 -54 40 -40 0 0 Z"/>
       </g>
     </g>
-    <g fill="url(#city)">
-      <rect x="0" y="560" width="1200" height="240"/><rect x="60" y="470" width="90" height="160"/><rect x="170" y="510" width="70" height="120"/><rect x="260" y="430" width="60" height="200"/>
-      <rect x="350" y="500" width="110" height="130"/><path d="M350 500 Q405 430 460 500 Z"/>
-      <rect x="520" y="330" width="70" height="300"/><rect x="540" y="300" width="30" height="40"/><rect x="552" y="270" width="6" height="34"/>
-      <rect x="640" y="500" width="80" height="130"/><rect x="760" y="455" width="64" height="175"/><rect x="860" y="520" width="90" height="110"/><rect x="980" y="470" width="60" height="160"/><rect x="1070" y="505" width="90" height="125"/>
+    <g stroke="#14110a" stroke-width="2.4">
+      <g transform="translate(225,742)"><circle r="17" fill="#e8861e"/><circle r="9" fill="#f2b13b"/></g>
+      <g transform="translate(262,756) scale(.8)"><circle r="17" fill="#e8861e"/><circle r="9" fill="#f2b13b"/></g>
+      <g transform="translate(985,752)"><circle r="16" fill="#e8861e"/><circle r="8" fill="#f2b13b"/></g>
     </g>
-    <g fill="#0c0b1f"><rect x="455" y="470" width="14" height="160"/><circle cx="462" cy="458" r="13"/><path d="M455 452 l-16 -16 M469 452 l16 -16" stroke="#0c0b1f" stroke-width="6"/></g>
-    <g fill="#ffd36b" opacity="0.85">
-      <rect x="535" y="360" width="8" height="12"/><rect x="552" y="360" width="8" height="12"/><rect x="569" y="360" width="8" height="12"/><rect x="535" y="392" width="8" height="12"/><rect x="569" y="392" width="8" height="12"/><rect x="535" y="424" width="8" height="12"/><rect x="552" y="424" width="8" height="12"/>
-      <rect x="80" y="492" width="9" height="13"/><rect x="100" y="492" width="9" height="13"/><rect x="120" y="492" width="9" height="13"/><rect x="80" y="520" width="9" height="13"/><rect x="120" y="520" width="9" height="13"/>
-      <rect x="775" y="478" width="9" height="13"/><rect x="795" y="478" width="9" height="13"/><rect x="775" y="506" width="9" height="13"/><rect x="995" y="492" width="9" height="13"/><rect x="1015" y="492" width="9" height="13"/>
-    </g>
-    <g font-family="Anton, sans-serif" opacity="0.95">
-      <text x="640" y="556" fill="#ff5d8f" font-size="22" letter-spacing="3">BAR</text>
-      <text x="190" y="600" fill="#41e0c7" font-size="18" letter-spacing="2">MEZCAL</text>
-      <text x="880" y="600" fill="#ffd36b" font-size="18" letter-spacing="2">CANTINA</text>
-    </g>
-    <g fill="#04030c">
-      <g transform="translate(120,720)"><path d="M0 60 C-10 10 -28 -8 -46 -34 C-22 -18 -8 0 0 30 C8 0 22 -18 46 -34 C28 -8 10 10 0 60 Z"/><path d="M0 60 C-30 30 -60 24 -86 22 C-58 6 -26 12 0 40 C26 12 58 6 86 22 C60 24 30 30 0 60 Z"/></g>
-      <g transform="translate(1080,730) scale(1.2)"><path d="M0 60 C-10 10 -28 -8 -46 -34 C-22 -18 -8 0 0 30 C8 0 22 -18 46 -34 C28 -8 10 10 0 60 Z"/><path d="M0 60 C-30 30 -60 24 -86 22 C-58 6 -26 12 0 40 C26 12 58 6 86 22 C60 24 30 30 0 60 Z"/></g>
-    </g>
-    <g transform="translate(300,470) rotate(-12)" opacity="0.92">
-      <circle cx="0" cy="0" r="118" fill="rgba(20,30,60,0.28)" stroke="#caa24b" stroke-width="7"/>
-      <circle cx="0" cy="0" r="118" fill="none" stroke="#0b1026" stroke-width="2"/>
-      <rect x="78" y="78" width="120" height="26" rx="13" transform="rotate(45 78 78)" fill="#caa24b"/>
-      <g fill="none" stroke="#caa24b" stroke-width="2.4" opacity="0.8" clip-path="circle(110px at 0 0)">
+    <g transform="translate(300,486) rotate(-10)">
+      <rect x="84" y="84" width="128" height="30" rx="15" transform="rotate(45 84 84)" fill="#e0a92e" stroke="#14110a" stroke-width="3.5"/>
+      <circle cx="0" cy="0" r="116" fill="rgba(20,40,80,0.22)" stroke="#e0a92e" stroke-width="9"/>
+      <circle cx="0" cy="0" r="116" fill="none" stroke="#14110a" stroke-width="3"/>
+      <g fill="none" stroke="#f0d68a" stroke-width="2.6" opacity="0.85" clip-path="circle(108px at 0 0)">
         <path d="M0 -78 C-44 -78 -66 -36 -66 8 C-66 44 -54 78 -36 104"/><path d="M0 -60 C-34 -60 -50 -28 -50 8 C-50 40 -42 66 -26 92"/><path d="M0 -44 C-26 -44 -36 -18 -36 10 C-36 38 -30 58 -16 82"/><path d="M0 -28 C-18 -28 -22 -8 -22 12 C-22 34 -16 52 -4 72"/><path d="M0 -78 C44 -78 66 -36 66 8 C66 44 54 78 36 104"/><path d="M0 -60 C34 -60 50 -28 50 8 C50 40 42 66 26 92"/><path d="M0 -44 C26 -44 36 -18 36 10 C36 38 30 58 16 82"/>
       </g>
     </g>
+    <g opacity="0.95">
+      <path d="M0 56 Q300 96 600 56 T1200 56" stroke="#f0d68a" stroke-width="1.6" fill="none"/>
+      <g stroke="#14110a" stroke-width="1.6">
+        <polygon points="60,64 110,64 85,104" fill="#d4456b"/><polygon points="180,70 230,70 205,110" fill="#2bb3a3"/><polygon points="320,70 370,70 345,110" fill="#e8a13a"/><polygon points="470,66 520,66 495,106" fill="#6c63d4"/><polygon points="620,62 670,62 645,102" fill="#d4456b"/><polygon points="760,66 810,66 785,106" fill="#2bb3a3"/><polygon points="900,70 950,70 925,110" fill="#e8a13a"/><polygon points="1040,66 1090,66 1065,106" fill="#6c63d4"/>
+      </g>
+    </g>
+    <rect x="0" y="0" width="1200" height="30" fill="url(#greca)"/>
+    <rect x="0" y="770" width="1200" height="30" fill="url(#greca)"/>
+    <line x1="0" y1="30" x2="1200" y2="30" stroke="#14110a" stroke-width="2"/>
+    <line x1="0" y1="770" x2="1200" y2="770" stroke="#14110a" stroke-width="2"/>
   </svg>
   <div class="vignette"></div>
   <div class="overlay">
-    <div class="kicker">★ Bureau of Final Nights · CDMX Field Office ★</div>
+    <div class="kicker">&#9733; Bureau of Final Nights &middot; CDMX Field Office &#9733;</div>
     <div class="op">OPERATION</div>
     <h1>Paul&nbsp;Wind</h1>
-    <div class="codeline">CODENAME: “THE GROOM” · STATUS: ABOUT TO BE MARRIED · NINE OPERATIVES MISSING</div>
+    <div class="codeline">CODENAME: &ldquo;THE GROOM&rdquo; &middot; STATUS: ABOUT TO BE MARRIED &middot; EIGHT OPERATIVES MISSING</div>
     <div class="classified">CONFIDENTIAL</div>
   </div>
   <div class="scrollcue">SCROLL TO OPEN THE CASE FILE<span class="chev"></span></div>
@@ -180,29 +215,28 @@
 
 <div class="sheet-wrap">
 
-<!-- ===== PAGE 1 — COVER ===== -->
 <section class="page reveal">
   <div class="tape"></div>
   <div class="hdr">
-    <div class="agency">★ BUREAU OF FINAL NIGHTS ★<br><span style="font-size:10px;color:var(--faded)">CIUDAD DE MÉXICO FIELD OFFICE</span></div>
+    <div class="agency">&#9733; BUREAU OF FINAL NIGHTS &#9733;<br><span style="font-size:10px;color:var(--faded)">CIUDAD DE MÉXICO FIELD OFFICE</span></div>
     <div class="meta">CASE No. <b>BACH-0925</b><br>DATE: <span class="fill">&nbsp;</span><br><span class="classified">CONFIDENTIAL</span></div>
   </div>
   <div class="stamp tl">EYES ONLY</div>
   <h1 class="title"><span class="op">OPERATION</span>PAUL&nbsp;WIND</h1>
-  <div class="subtitle">Codename: <b>THE GROOM</b> &nbsp;·&nbsp; Status: ABOUT TO BE MARRIED &nbsp;·&nbsp; Threat Level: MILD</div>
-  <div class="field"><b>ISSUED TO:</b> The Subject &amp; his Handler (Best Man) — <span class="fill">&nbsp;</span></div>
-  <div class="field"><b>OPERATIVES MISSING:</b> NINE (9) &nbsp;·&nbsp; <b>LAST SEEN:</b> 3 locations, 3 each</div>
+  <div class="subtitle">Codename: <b>THE GROOM</b> &nbsp;&middot;&nbsp; Status: ABOUT TO BE MARRIED &nbsp;&middot;&nbsp; Threat Level: MILD</div>
+  <div class="field"><b>ISSUED TO:</b> The Subject &amp; his Handler — <b>Jay Landrum</b> (Best Man)</div>
+  <div class="field"><b>OPERATIVES MISSING:</b> EIGHT (8) &nbsp;&middot;&nbsp; <b>LAST SEEN:</b> 3 locations &middot; 3 / 3 / 2</div>
   <div class="brief">
     <h3>// Mission Briefing</h3>
-    <p>At <span class="redact">██:██</span> hours, nine of the Subject's known associates vanished into the night across Cuauhtémoc. Intelligence places them in <b>three groups of three</b>, each holed up in a different bar, refusing to surface until Paul finds them in person.</p>
-    <p>Your objective: recover all nine before last call. At each stop, check off the squad as you find them — the moment the third name is ticked, the card flips to reveal the clue to your next destination. The crew grows as you go. The operation ends only when all nine are reunited underground.</p>
-    <p><b>The Handler</b> carries this file, sets the pace, grants hints, and documents everything for the permanent record (i.e. films it).</p>
+    <p>At <span class="redact">██:██</span> hours, eight of the Subject's known associates vanished into the night across Cuauhtémoc. Intelligence places them in three squads — two of three, one of two — each holed up in a different bar, refusing to surface until Paul finds them in person.</p>
+    <p>Your objective: recover all eight before last call. At each stop, check off the squad as you find them — the moment the final name is ticked, the card flips to reveal the clue to your next destination. The crew grows as you go. The operation ends only when all eight are reunited underground.</p>
+    <p><b>Handler Jay Landrum</b> carries this file, sets the pace, grants hints, and documents everything for the permanent record (i.e. films it).</p>
   </div>
   <div class="sectlabel">Rules of Engagement</div>
   <ol class="rules">
-    <li>Paul reads each clue aloud, then leads. The Handler may grant <b>ONE</b> hint per location — at a price of his choosing.</li>
+    <li>Paul reads each clue aloud, then leads. Handler Jay may grant <b>ONE</b> hint per location — at a price of his choosing.</li>
     <li>No location may be skipped. No phones used to cheat the riddles (maps for cabs only).</li>
-    <li>A squad is "recovered" only once <b>all three</b> members are found and their challenge is cleared.</li>
+    <li>A squad is "recovered" only once <b>every member</b> is found and their challenge is cleared.</li>
     <li>Hydrate between stops. One glass of water per bar is mandatory. The Bureau is not liable.</li>
     <li>Paul does not pay for a single drink tonight. This is non-negotiable.</li>
   </ol>
@@ -210,16 +244,14 @@
   <div class="footer-note">FORM BFN-1 · UNAUTHORIZED SOBRIETY IS A PROSECUTABLE OFFENSE</div>
 </section>
 
-<!-- ===== PAGE 2 — INTERACTIVE HUNT ===== -->
 <section class="page reveal">
   <div class="hdr">
-    <div class="agency">★ THE HUNT ★</div>
+    <div class="agency">&#9733; THE HUNT &#9733;</div>
     <div class="meta">CASE No. <b>BACH-0925</b><br><span class="classified">FOR THE SUBJECT</span></div>
   </div>
   <div class="sectlabel">Recover Your Squad · Unlock The Clue</div>
-  <p style="font-size:12px;color:var(--faded);margin-bottom:20px;">Pull this up on a phone at the table. Find your squad at each stop and tap their box. The instant all three are checked, the card flips to reveal the riddle for your next destination. <i>(Printing instead? You'll get a static version with the checklist and clue stacked together.)</i></p>
+  <p style="font-size:12px;color:var(--faded);margin-bottom:20px;">Pull this up on a phone at the table. Find your squad at each stop and tap their box. The instant everyone is checked, the card flips to reveal the riddle for your next destination. Your progress is saved automatically — refresh and you'll pick up right where you left off. <i>(Printing instead? You'll get a static version with the checklist and clue stacked together.)</i></p>
 
-  <!-- START -->
   <div class="clue">
     <span class="destination">YOUR FIRST MOVE</span>
     <span class="cluenum">CLUE 01 · START HERE</span>
@@ -232,7 +264,6 @@ The night does not officially start till they are here to stay.</div>
     <div class="foot">Get to the rooftop, hunt down Squad A, then check them in below.</div>
   </div>
 
-  <!-- FLIP A -->
   <div class="flip-card">
     <div class="flip-inner" data-card>
       <div class="flip-face flip-front">
@@ -241,9 +272,9 @@ The night does not officially start till they are here to stay.</div>
         <div class="recover-h">Found them? Check them in.</div>
         <div class="recover-sub">Three masked men, somewhere on the roof.</div>
         <label class="person"><input type="checkbox"><span class="box"></span><span class="name">Cyrus Edjlali</span></label>
-        <label class="person"><input type="checkbox"><span class="box"></span><span class="name">Jay Landrum</span></label>
         <label class="person"><input type="checkbox"><span class="box"></span><span class="name">Brett Schaffer</span></label>
-        <div class="unlock-hint">✓ ✓ ✓ — check all three to unlock CLUE 02</div>
+        <label class="person"><input type="checkbox"><span class="box"></span><span class="name">Henrique Lage</span></label>
+        <div class="unlock-hint">check all three to unlock CLUE 02</div>
       </div>
       <div class="flip-face flip-back">
         <span class="destination">SECOND CONTACT</span>
@@ -254,12 +285,11 @@ No sign will announce you; let incense and candlelight pull you in.
 Order the drink that is set alight — not by name, but by sin.
 Three hide in the haze and won't rise till the bartender gives you the nod.
 Drink it down like an offering. Move out with the blessing of gods.</div>
-        <button class="flipback-btn" type="button" data-back>↺ back to checklist</button>
+        <button class="flipback-btn" type="button" data-back>back to checklist</button>
       </div>
     </div>
   </div>
 
-  <!-- FLIP B -->
   <div class="flip-card">
     <div class="flip-inner" data-card>
       <div class="flip-face flip-front">
@@ -267,66 +297,66 @@ Drink it down like an offering. Move out with the blessing of gods.</div>
         <span class="squadtag">SQUAD B</span>
         <div class="recover-h">Found them? Check them in.</div>
         <div class="recover-sub">Hiding in the haze until the drink is ordered.</div>
-        <label class="person"><input type="checkbox"><span class="box"></span><span class="name">Henrique Lage</span></label>
         <label class="person"><input type="checkbox"><span class="box"></span><span class="name">Max D</span></label>
         <label class="person"><input type="checkbox"><span class="box"></span><span class="name">Zach Hollwedel</span></label>
-        <div class="unlock-hint">✓ ✓ ✓ — check all three to unlock CLUE 03</div>
+        <label class="person"><input type="checkbox"><span class="box"></span><span class="name">Matt Burruss</span></label>
+        <div class="unlock-hint">check all three to unlock CLUE 03</div>
       </div>
       <div class="flip-face flip-back">
         <span class="destination">FINAL CONTACT</span>
         <span class="cluenum-back">CLUE 03</span>
-        <div class="verse">The last three roost where the wise night-bird goes hunting in the dark,
+        <div class="verse">The last two roost where the wise night-bird goes hunting in the dark,
 on Atlixco's quiet stretch — but the doorway bears no mark.
 You will pass it once, then twice; the true entrance is a lie.
 Stand your ground, speak the word, and the wall itself will reply.
-Nine were lost. Tonight you walk every last one of them home.
+Eight were lost. Tonight you walk every last one of them home.
 Give the password. Step on through. You will never again drink alone.</div>
-        <button class="flipback-btn" type="button" data-back>↺ back to checklist</button>
+        <button class="flipback-btn" type="button" data-back>back to checklist</button>
       </div>
     </div>
   </div>
 
-  <!-- FLIP C -->
   <div class="flip-card">
     <div class="flip-inner" data-card>
       <div class="flip-face flip-front">
         <span class="loc">STOP 3 · THROUGH THE HIDDEN DOOR</span>
         <span class="squadtag">SQUAD C</span>
         <div class="recover-h">Found them? Check them in.</div>
-        <div class="recover-sub">The final three, waiting underground.</div>
-        <label class="person"><input type="checkbox"><span class="box"></span><span class="name">Matt Burruss</span></label>
+        <div class="recover-sub">The final two, waiting underground.</div>
         <label class="person"><input type="checkbox"><span class="box"></span><span class="name">Blake Bowen</span></label>
         <label class="person"><input type="checkbox"><span class="box"></span><span class="name">Mahesh Panwar</span></label>
-        <div class="unlock-hint">✓ ✓ ✓ — check all three to complete the operation</div>
+        <div class="unlock-hint">check both to complete the operation</div>
       </div>
       <div class="flip-face flip-back">
-        <div class="finale">All nine<br>recovered.</div>
+        <div class="finale">All eight<br>recovered.</div>
         <div class="verse">Operation: The Groom — COMPLETE.
-Nine found. One last night of freedom, spent right.
+Eight found. One last night of freedom, spent right.
 Raise every glass to Paul. The Bureau salutes you.</div>
-        <button class="flipback-btn" type="button" data-back>↺ back to checklist</button>
+        <button class="flipback-btn" type="button" data-back>back to checklist</button>
       </div>
     </div>
   </div>
+
+  <div class="reset-row"><button class="reset-btn" type="button" id="resetHunt">RESET HUNT PROGRESS</button></div>
 </section>
 
-<!-- ===== PAGE 3 — HANDLER ANNEX ===== -->
 <section class="page reveal">
   <div class="hdr">
-    <div class="agency">★ HANDLER'S ANNEX ★</div>
-    <div class="meta">CASE No. <b>BACH-0925</b><br><span class="classified">BEST MAN ONLY</span></div>
+    <div class="agency">&#9733; HANDLER'S ANNEX &#9733;</div>
+    <div class="meta">CASE No. <b>BACH-0925</b><br><span class="classified">HANDLER ONLY</span></div>
   </div>
   <div class="stamp blue" style="top:140px;left:50%;transform:translateX(-50%) rotate(-6deg);">DO NOT SHOW SUBJECT</div>
-  <div class="annex-warn">⚠ ANSWER KEY · SQUAD ASSIGNMENTS · DESTROY AFTER USE ⚠</div>
+  <div class="annex-warn">ANSWER KEY · SQUAD ASSIGNMENTS · DESTROY AFTER USE</div>
+  <div class="annex-sub">HANDLER: JAY LANDRUM</div>
 
   <div class="stop">
     <div class="bar"><span>STOP 1 · CLUE 01 SOLUTION</span><span>~8:00 PM</span></div>
     <div class="body">
-      <p class="answer">→ TOLEDO ROOFTOP — Av. Chapultepec 461, Juárez</p>
+      <p class="answer">&rarr; TOLEDO ROOFTOP — Av. Chapultepec 461, Juárez</p>
       <p><i>Why:</i> "above Chapultepec" = the rooftop on Av. Chapultepec; "name the Spaniards used / finest blades" = Toledo, the Spanish city famed for forged steel. Opens early, easy to find — gentle warm-up.</p>
-      <p><b>SQUAD A:</b> <span class="squad">Cyrus Edjlali · Jay Landrum · Brett Schaffer</span></p>
+      <p><b>SQUAD A:</b> <span class="squad">Cyrus Edjlali · Brett Schaffer · Henrique Lage</span></p>
       <p><b>Setup:</b> Squad A arrives early, grabs a rooftop table, wears matching disguises (lucha masks / matching jerseys). Stay scattered until found.</p>
-      <p><b>Challenge:</b> Each masked member hands Paul an unmarked shot (tequila vs. mezcal vs. something fun). He must guess the spirit. Wrong guess = a forfeit. Once all three found, Paul checks them in → card flips to CLUE 02.</p>
+      <p><b>Challenge:</b> Each masked member hands Paul an unmarked shot (tequila vs. mezcal vs. something fun). He must guess the spirit. Wrong guess = a forfeit. All three found → check them in → card flips to CLUE 02.</p>
       <p><b>Forfeits:</b> 10 push-ups · serenade a stranger · text his fiancée a cheesy love line · wear the mask till the next bar.</p>
     </div>
   </div>
@@ -334,9 +364,9 @@ Raise every glass to Paul. The Bureau salutes you.</div>
   <div class="stop">
     <div class="bar"><span>STOP 2 · CLUE 02 SOLUTION</span><span>~9:15 PM</span></div>
     <div class="body">
-      <p class="answer">→ TLECÁN — Av. Álvaro Obregón 228, Roma Norte (~12 min walk / 5 min cab south)</p>
+      <p class="answer">&rarr; TLECÁN — Av. Álvaro Obregón 228, Roma Norte (~12 min walk / 5 min cab south)</p>
       <p><i>Why:</i> "down Obregón" = Álvaro Obregón; "named for FIRE in a tongue the Aztecs shared" = <i>tle</i> is Nahuatl for fire. Smoke/incense + Aztec design + agave spirits. No reservations — works for a moving group.</p>
-      <p><b>SQUAD B:</b> <span class="squad">Henrique Lage · Max D · Zach Hollwedel</span></p>
+      <p><b>SQUAD B:</b> <span class="squad">Max D · Zach Hollwedel · Matt Burruss</span></p>
       <p><b>Setup:</b> Squad B blends into the crowd. They reveal themselves only after Paul completes the order.</p>
       <p><b>Challenge:</b> Paul must order the flamed/lit cocktail <b>by description only — no name</b> ("the one set on fire"). Tip the bartender to play along. Once served &amp; squad found, check them in → card flips to CLUE 03.</p>
     </div>
@@ -345,17 +375,17 @@ Raise every glass to Paul. The Bureau salutes you.</div>
   <div class="stop">
     <div class="bar"><span>STOP 3 · CLUE 03 SOLUTION — FINALE</span><span>~10:30 PM</span></div>
     <div class="body">
-      <p class="answer">→ OWL BAR (hidden speakeasy) — C. Atlixco 94, Condesa</p>
+      <p class="answer">&rarr; OWL BAR (hidden speakeasy) — C. Atlixco 94, Condesa</p>
       <p><i>Why:</i> "wise night-bird" = owl; "doorway bears no mark / wall will reply" = hidden speakeasy entrance with a password. Closed Sun &amp; Mon — run Thu–Sat. DJ + 4.9 rating. <b>Reserve a group table in advance.</b></p>
-      <p><b>SQUAD C:</b> <span class="squad">Matt Burruss · Blake Bowen · Mahesh Panwar</span></p>
+      <p><b>SQUAD C:</b> <span class="squad">Blake Bowen · Mahesh Panwar</span></p>
       <p><b>Setup:</b> Squad C waits inside at the reserved table. Give Paul only the corner + the password; let him hunt for the door. Final check-in flips to the victory panel.</p>
-      <div class="pwbox">PASSWORD: “ LECHUZA ” &nbsp; <span style="font-size:11px;font-family:'Courier Prime'">(confirm/swap with the bar — Spanish for "owl")</span></div>
-      <p>On entry, all nine converge. Operation complete.</p>
+      <div class="pwbox">PASSWORD: &ldquo; LECHUZA &rdquo; &nbsp; <span style="font-size:11px;font-family:'Courier Prime'">(confirm/swap with the bar — Spanish for "owl")</span></div>
+      <p>On entry, all eight converge with Paul &amp; Jay. Operation complete.</p>
     </div>
   </div>
 
   <div class="brief" style="margin-top:6px;">
-    <h3>// Handler Logistics</h3>
+    <h3>// Handler Logistics — Jay</h3>
     <p style="margin-bottom:6px;">• Pre-brief all 3 squads on arrival times + disguises the day before.<br>
     • Cabs/Uber between stops = 5–8 min; route runs N→S (Juárez → Roma → Condesa).<br>
     • Confirm the Owl Bar reservation + finale password with the venue.<br>
@@ -367,22 +397,52 @@ Raise every glass to Paul. The Bureau salutes you.</div>
 </div>
 
 <script>
-  // scroll reveal
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  // scroll-reveal
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:0.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 
-  // flip cards: flip when all boxes checked
-  document.querySelectorAll('[data-card]').forEach(card=>{
-    const boxes = card.querySelectorAll('input[type=checkbox]');
-    const update = ()=>{
-      const all = [...boxes].every(b=>b.checked);
-      card.classList.toggle('flipped', all);
-    };
-    boxes.forEach(b=>b.addEventListener('change', update));
-    const back = card.querySelector('[data-back]');
-    if(back) back.addEventListener('click', ()=> card.classList.remove('flipped'));
+  // ---- persistence ----
+  var STORE_KEY = 'opPaulWind_v1';
+  var allBoxes = Array.prototype.slice.call(document.querySelectorAll('.person input[type=checkbox]'));
+
+  function load(){ try{ return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; }catch(e){ return {}; } }
+  function save(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify({
+      boxes: allBoxes.map(function(b){ return b.checked; }),
+      scroll: window.scrollY
+    })); }catch(e){} }
+
+  var saved = load();
+  if(Array.isArray(saved.boxes)){
+    allBoxes.forEach(function(b,i){ b.checked = !!saved.boxes[i]; });
+  }
+
+  document.querySelectorAll('[data-card]').forEach(function(card){
+    var boxes = Array.prototype.slice.call(card.querySelectorAll('input[type=checkbox]'));
+    function allChecked(){ return boxes.every(function(b){ return b.checked; }); }
+    function update(){ card.classList.toggle('flipped', allChecked()); save(); }
+    boxes.forEach(function(b){ b.addEventListener('change', update); });
+    var back = card.querySelector('[data-back]');
+    if(back) back.addEventListener('click', function(){ card.classList.remove('flipped'); save(); });
+    card.classList.add('no-anim');
+    card.classList.toggle('flipped', allChecked());
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ card.classList.remove('no-anim'); }); });
+  });
+
+  if(typeof saved.scroll === 'number' && saved.scroll > 0){
+    var prev = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
+    requestAnimationFrame(function(){ window.scrollTo(0, saved.scroll); document.documentElement.style.scrollBehavior = prev; });
+  }
+  var ticking;
+  window.addEventListener('scroll', function(){ clearTimeout(ticking); ticking = setTimeout(save, 150); });
+
+  var resetBtn = document.getElementById('resetHunt');
+  if(resetBtn) resetBtn.addEventListener('click', function(){
+    allBoxes.forEach(function(b){ b.checked = false; });
+    document.querySelectorAll('[data-card]').forEach(function(c){ c.classList.remove('flipped'); });
+    try{ localStorage.removeItem(STORE_KEY); }catch(e){}
   });
 </script>
 </body>
